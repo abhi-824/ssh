@@ -1,5 +1,5 @@
 [build]
-  command = "npm install && npm run build"
+  command = "npm run build"
   publish = "build/client"
   functions = "netlify/functions"
 
@@ -7,3 +7,6 @@
   from = "/*"
   to = "/.netlify/functions/server"
   status = 200
+
+[functions]
+  node_bundler = "esbuild"
