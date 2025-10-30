@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { Search, Play, Clock } from 'lucide-react';
 import { DashboardLayout } from '../shared/DashboardLayout';
+import { useNavigate } from 'react-router';
 
 export default function StockDashboard() {
   const [selectedCategory, setSelectedCategory] = useState('All Stocks');
+  const navigate = useNavigate();
 
   const categories = [
     'All Stocks',
@@ -211,7 +213,7 @@ export default function StockDashboard() {
                 </div>
 
                 {/* Start Analysis Button */}
-                <button className="w-full bg-black text-white py-3 rounded-xl font-medium flex items-center justify-center gap-2 hover:bg-gray-800 transition-colors">
+                <button className="w-full bg-black text-white py-3 rounded-xl font-medium flex items-center justify-center gap-2 hover:bg-gray-800 transition-colors" onClick={()=>{navigate("/analysis")}}>
                   <Play className="w-4 h-4" />
                   Start Analysis
                 </button>
