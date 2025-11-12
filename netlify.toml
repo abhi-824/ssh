@@ -2,6 +2,3 @@
   command = "npm run build"
   publish = "build/client"
   functions = "build/server"
-
-[[plugins]]
-  package = "@netlify/vite-plugin-react-router"
