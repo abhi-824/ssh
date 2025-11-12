@@ -1,7 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router';
 import { Zap, ArrowRight } from 'lucide-react';
 
 export function HeroSection() {
+  const navigate = useNavigate();
   return (
     <section className="pt-32 px-4 pb-16">
       <div className="max-w-7xl mx-auto">
@@ -43,11 +45,11 @@ export function HeroSection() {
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4 mb-16">
-              <button className="bg-emerald-400 hover:bg-emerald-500 text-black px-8 py-4 rounded-xl font-medium flex items-center gap-2 transition-all transform hover:scale-105">
+              <button onClick={()=>{navigate("/signup")}} className="bg-emerald-400 hover:bg-emerald-500 text-black px-8 py-4 rounded-xl font-medium flex items-center gap-2 transition-all transform hover:scale-105">
                 <Zap className="w-5 h-5" />
                 STOP THE LOSSES - START FREE ANALYSIS
               </button>
-              <button className="bg-gray-800 hover:bg-gray-700 text-white px-8 py-4 rounded-xl font-medium flex items-center gap-2 transition-colors">
+              <button onClick={()=>{navigate("/signin")}} className="bg-gray-800 hover:bg-gray-700 text-white px-8 py-4 rounded-xl font-medium flex items-center gap-2 transition-colors">
                 Sign In
                 <ArrowRight className="w-5 h-5" />
               </button>

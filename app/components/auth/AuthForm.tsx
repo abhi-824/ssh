@@ -269,7 +269,7 @@ export default function AuthForm({ isSignup = false }: { isSignup: boolean }) {
                         checked={agreedToTerms}
                         onChange={(e) => setAgreedToTerms(e.target.checked)}
                         required
-                        className="mt-1 w-4 h-4 rounded border-gray-300 text-black focus:ring-black"
+                        className="mt-1 w-4 h-4 rounded text-black focus:ring-black"
                       />
                       <span className="text-sm text-gray-600">
                         I agree to the{' '}
